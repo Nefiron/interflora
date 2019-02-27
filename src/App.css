@@ -1,33 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+
 .App {
-  text-align: center;
+  background-color: #fff;
+  color: #1d1d1b;
+  font-family: omnes-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 30px 0px 30px 0px;
+  justify-content: space-evenly
 }
 
-.App-link {
-  color: #61dafb;
+.form-components {
+  display: flex
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header h1 {
+  font-size: 5em;
+  margin: auto;
+}
+
+header img {
+  margin: auto;
+}
+
+.button {
+  background-color: #4f4daa;
+  border-radius: 80px;
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  height: 50px;
+  letter-spacing: .86px;
+  line-height: 50px;
+  margin: 0;
+  min-width: 250px;
+  outline: none;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s ease,color .2s ease;
+  width: auto;
+  font-family: Arial,serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.greeting-input, select, option {
+  margin: 10px 10px 10px 0px;
+  width: 100%;
+  border: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 45px;
+  padding: 7px 15px;
+  vertical-align: middle;
+}
+
+.greeting-input:focus {
+  background: #f8f8f8;
+  border: 0 solid #4f4daa;
+  outline: 1px solid #4f4daa;
+}
+
+.greetings-list {
+  margin: 10px 10px 10px 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(69,69,69,.16);
+  padding: 40px 40px 60px;
+
+}
+
+.greetings-list li {
+  border-bottom: 1px rgb(202, 202, 202) solid;
+  width: 100%;
+  display: inline-block;
+}
+
+.greetings-list p {
+  display: block;
+  font-size: 1.3em;
+  float: left;
+}
+
+.greetings-list span {
+  display: block;
+  float: right;
+}
+
+input, select, option {
+  letter-spacing: normal;
+  line-height: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  background: #f8f8f8;
+  border: 0;
+}
+
+select, option {
+  width: 25%;
+}
+
+span {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-control button {
+  float: right;
+}
+
+@media (max-width: 770px) {
+  .form-control button {
+    width: 100%;
+    float: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 720px) {
+  .form-control button {
+    width: 100%;
+    float: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    font-size: 3.5em;
+    margin-top: 20px;
+  }
+
+  .form-components {
+    flex-wrap: wrap;
+  }
+
+  .form-components select {
+    width: 100%;
   }
 }
