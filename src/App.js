@@ -10,7 +10,7 @@ class App extends Component {
         <div className="container">
           <header className="header">
             <img src={logo} />
-            <h1>Dine Hilsner</h1>
+            <h1>Dine Hilsner!!!</h1>
           </header>
           <Form dataFeed={this.updateData}/>
         </div>
